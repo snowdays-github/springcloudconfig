@@ -1,3 +1,6 @@
 spring:
-  application:
-    name: gateway
+  rabbitmq:
+    host: localhost
+    port: 15672
+    username: guest
+    password: guest
