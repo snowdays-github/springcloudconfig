@@ -1,2 +1,15 @@
 lagou:
   message: 1236fdsfsd
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.18.5:3306/batistest?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC
+    username: root
+    password: 123456
+  jpa:
+    database: mysql
+    show-sql: true
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+      ddl-auto: none
