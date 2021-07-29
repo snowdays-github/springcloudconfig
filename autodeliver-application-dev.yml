@@ -1,5 +1,5 @@
 lagou:
-  message: 123
+  message: 123456123
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
