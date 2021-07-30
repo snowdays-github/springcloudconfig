@@ -14,7 +14,7 @@ spring:
       bindings:
         output: #Sink接口中@Input定义了input名
           destination: daorenExchange
-          content-type: text/plain # application/json
+          content-type: text/plain
           binder: daorenRabbitBinder
 eureka:
   instance:
