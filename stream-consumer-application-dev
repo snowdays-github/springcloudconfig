@@ -1,0 +1,25 @@
+spring:
+  cloud:
+    stream:
+      binders:
+        daorenRabbitBinder:
+          type: rabbit
+          environment:
+            spring:
+              rabbitmq:
+                host: 192.168.18.5
+                port: 5672
+                username: admin
+                password: 123456
+      bindings:
+        input: #Sink接口中@Input定义了input名
+          destination: daorenExchange
+          content-type: text/plain # application/json
+          binder: daorenRabbitBinder
+eureka:
+  instance:
+    prefer-ip-address: true
+    hostname: localhost
+  client:
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:8761/eureka,http://${eureka.instance.hostname}:8762/eureka          
