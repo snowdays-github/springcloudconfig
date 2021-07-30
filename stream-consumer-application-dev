@@ -12,7 +12,7 @@ spring:
                 username: admin
                 password: 123456
       bindings:
-        input: #Sink接口中@Input定义了input名
+        output: #Sink接口中@Input定义了input名
           destination: daorenExchange
           content-type: text/plain # application/json
           binder: daorenRabbitBinder
